@@ -48,14 +48,23 @@ INSTALLED_APPS = [
     'goods',
     'order',
     'user',
+    'menu',
+    'address',
     'rest_framework',
+    'corsheaders',
 ]
 
+#允许所有域名跨域
+CORS_ORIGIN_ALLOW_ALL = True
+#允许携带cookie
+CORS_ALLOW_CREDENTIALS = True
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -139,13 +148,23 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR /  'static']
+STATICFILES_DIRS = [BASE_DIR /'static']
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.py.BigAutoField'
 
 #静态文件地址
 
 MEDIA_ROOT = BASE_DIR / 'downloads'
 MEDIA_URL = '/downloads/'
+
+
+PAGE_NUM = 20
+
+#静态文件服务器配置
+IMAGE_URL = 'http://127.0.0.1:8000/static/product_images/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':['utils.jwt_auth.JwtHeaderAuthentication']
+}
