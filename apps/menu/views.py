@@ -13,15 +13,13 @@ class GoodsMainView(View):
 	def get(self, request):
 		main_menu = models.MainMenu.objects.all()
 		result_list = [m for m in main_menu.values()]
-		for m in main_menu.values():
-			m.pop('id')
-			m.pop('main_menu_url')
-			result_list.append(m)
-
+		# for m in main_menu.values():
+		# 	m.pop('id')
+		# 	m.pop('main_menu_url')
+		# 	result_list.append(m)
 		return JsonResponse(MenuResponse.success(result_list))
 
 	def post(self, request):
-
 		return HttpResponse('ok')
 
 

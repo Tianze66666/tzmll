@@ -22,3 +22,5 @@ class Comment(models.Model):
     class Meta:
         managed = False
         db_table = 'comment'
+        verbose_name = '评论表'
+        verbose_name_plural = verbose_name

@@ -22,3 +22,5 @@ class UserAddress(models.Model):
     class Meta:
         managed = False
         db_table = 'user_address'
+        verbose_name = '地址表'
+        verbose_name_plural = verbose_name

@@ -26,8 +26,10 @@ def get_payload(token):
 	return result
 
 class JwtHeaderAuthentication(BaseAuthentication):
-
 	def authenticate(self, request):
 		token = request.headers.get('Authorization')
 		result_payload = get_payload(token)
 		return (result_payload,token)
+
+
+

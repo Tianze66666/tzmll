@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-alw77qms%5m8@4!l5g=sfs7%&ti54b8#)_tkwc(#wf(1&45gua
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['120.26.129.134','127.0.0.1']
 
 
 # Application definition
@@ -68,6 +68,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'Tzmall.urls'
@@ -152,7 +153,7 @@ STATICFILES_DIRS = [BASE_DIR /'static']
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.py.BigAutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #静态文件地址
 
@@ -163,7 +164,7 @@ MEDIA_URL = '/downloads/'
 PAGE_NUM = 20
 
 #静态文件服务器配置
-IMAGE_URL = 'http://127.0.0.1:8000/static/product_images/'
+IMAGE_URL = 'http://120.26.129.134:8080/static/product_images/'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':['utils.jwt_auth.JwtHeaderAuthentication']

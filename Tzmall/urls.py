@@ -28,3 +28,5 @@ urlpatterns = [
     path('address/',include('address.urls')),
     path('comment/',include('comment.urls'))
 ]
+
+handler404 = 'Tzmall.view.handler404'

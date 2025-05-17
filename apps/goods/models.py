@@ -27,3 +27,5 @@ class Goods(models.Model):
     class Meta:
         managed = False
         db_table = 'goods'
+        verbose_name = '商品表'
+        verbose_name_plural = verbose_name

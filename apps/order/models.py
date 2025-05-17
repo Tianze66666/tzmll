@@ -23,6 +23,8 @@ class Order(models.Model):
     class Meta:
         managed = False
         db_table = 'order'
+        verbose_name = '订单表'
+        verbose_name_plural = verbose_name
 
 
 class OrderGoods(models.Model):

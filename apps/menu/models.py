@@ -17,6 +17,8 @@ class SubMenu(models.Model):
     class Meta:
         managed = False
         db_table = 'sub_menu'
+        verbose_name = '子菜单表'
+        verbose_name_plural = verbose_name
 
     def __str__(self):
         result = {}
@@ -35,6 +37,8 @@ class MainMenu(models.Model):
     class Meta:
         managed = False
         db_table = 'main_menu'
+        verbose_name = '主菜单表'
+        verbose_name_plural = verbose_name
 
     def __str__(self):
         result = {}
