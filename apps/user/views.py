@@ -51,8 +51,9 @@ class LoginAPIView(GenericAPIView):
 	def post(self,request):
 		request_data = request.data
 		email = request_data.get('email')
-		user_data = User.objects.get(email=email)
-		if not user_data:
+		try:
+			user_data = User.objects.get(email=email)
+		except Exception as e:
 			return UserResponse.other('用户名或密码错误')
 		# user_ser = UserSerializer(instance=user_data,many=False)
 		request_password = request_data.get('password')

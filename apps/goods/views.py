@@ -4,7 +4,7 @@ from datetime import datetime
 from django.http import request
 from django.shortcuts import render
 from rest_framework.views import APIView
-from django.http.response import JsonResponse
+from django.http.response import JsonResponse, HttpResponse
 # Create your views here.
 from Tzmall.settings import PAGE_NUM
 from .models import Goods
@@ -94,3 +94,9 @@ class DecimalEncoder(json.JSONEncoder):
 			return float(o)
 		elif isinstance(0,datetime):
 			return o.strftime("%Y-%m-%d %H:%M:%S")
+
+
+class GoodsSearchDataCountAPIView(APIView):
+	def get(self,request,keyword):
+		count = Goods.objects.filter(name__contains=keyword).count()
+		return HttpResponse(count)

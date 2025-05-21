@@ -4,27 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ad7821c-8488-4f37-bda7-3816dfc75ddd" name="更改" comment="后端接口初步完成">
-      <change afterPath="$PROJECT_DIR$/Tzmall/view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+    <list default="true" id="5ad7821c-8488-4f37-bda7-3816dfc75ddd" name="更改" comment="添加goods的find接口和search接口">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tzmall/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tzmall/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tzmall/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tzmall/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/address/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/address/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cart/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cart/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cart/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cart/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/comment/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/comment/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/comment/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/comment/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/comment/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/comment/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/comment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/comment/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/goods/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/goods/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/goods/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/goods/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/menu/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/menu/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/menu/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/menu/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/menu/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/menu/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/order/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/order/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/order/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/order/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/jwt_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/jwt_auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/ResponseMessage.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/ResponseMessage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +64,13 @@
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/desk/muxi_shop.sql&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.documentation.PythonDocumentationConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.certificates&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -232,7 +224,27 @@
       <workItem from="1747224938717" duration="1066000" />
       <workItem from="1747395235433" duration="9000" />
       <workItem from="1747396130095" duration="492000" />
-      <workItem from="1747478697233" duration="1601000" />
+      <workItem from="1747478697233" duration="2004000" />
+      <workItem from="1747551052725" duration="277000" />
+      <workItem from="1747551432312" duration="15000" />
+      <workItem from="1747551592630" duration="13000" />
+      <workItem from="1747551708737" duration="8000" />
+      <workItem from="1747551850208" duration="11000" />
+      <workItem from="1747552041577" duration="194000" />
+      <workItem from="1747552259624" duration="63000" />
+      <workItem from="1747578824672" duration="61000" />
+      <workItem from="1747580173733" duration="339000" />
+      <workItem from="1747581031570" duration="114000" />
+      <workItem from="1747581192923" duration="743000" />
+      <workItem from="1747637387435" duration="14000" />
+      <workItem from="1747643171955" duration="2000" />
+      <workItem from="1747655564753" duration="2000" />
+      <workItem from="1747656099163" duration="13000" />
+      <workItem from="1747665809628" duration="2557000" />
+      <workItem from="1747798717111" duration="739000" />
+      <workItem from="1747800671425" duration="130000" />
+      <workItem from="1747801690259" duration="61000" />
+      <workItem from="1747802150304" duration="1346000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <option name="closed" value="true" />
@@ -258,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745498121237</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="添加goods的find接口和search接口">
+      <option name="closed" value="true" />
+      <created>1747480543200</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747480543200</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +298,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="项目初始化" />
     <MESSAGE value="后端接口初步完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="后端接口初步完成" />
+    <MESSAGE value="添加goods的find接口和search接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加goods的find接口和search接口" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Tzmall$token_demo.coverage" NAME="token_demo 覆盖结果" MODIFIED="1745462886605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

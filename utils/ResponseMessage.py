@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 # @Author  ：天泽1344
 """响应数据工具"""
-from django.http.response import JsonResponse
+from django.http.response import JsonResponse, HttpResponse
 
 
 class MenuResponse:
@@ -69,3 +69,19 @@ class UserResponse:
 	def other(data):
 		"""不确定请求"""
 		return JsonResponse({'status': 4002, 'data': data})
+
+class CommentResponse:
+	@staticmethod
+	def success(data):
+		"""成功请求"""
+		return JsonResponse({'status': 5000, 'data': data})
+
+	@staticmethod
+	def filed(data):
+		"""失败请求"""
+		return JsonResponse({'status': 5001, 'data': data})
+
+	@staticmethod
+	def other(data):
+		"""不确定请求"""
+		return JsonResponse({'status': 5002, 'data': data})
