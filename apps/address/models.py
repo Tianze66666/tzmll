@@ -18,6 +18,7 @@ class UserAddress(models.Model):
     district = models.CharField(max_length=255, blank=True, null=True)
     default = models.BooleanField(blank=True, null=True,)
     create_time = models.DateTimeField(blank=True, null=True,default=now)
+    delete = models.BooleanField(blank=True, null=True,default=False)
 
     class Meta:
         managed = False

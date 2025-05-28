@@ -4,7 +4,7 @@ from django.db import models
 
 class Cart(models.Model):
 	id = models.AutoField(primary_key=True,null=False,unique=True,verbose_name='购物车id')
-	sku_id = models.CharField(null=False,max_length=255,unique=True,verbose_name='物品id')
+	sku_id = models.CharField(null=False,max_length=255,verbose_name='物品id')
 	nums = models.IntegerField(verbose_name='购物数量')
 	email = models.CharField(max_length=255,verbose_name='用户邮箱')
 	is_delete = models.BooleanField(default=False,verbose_name='是否删除')

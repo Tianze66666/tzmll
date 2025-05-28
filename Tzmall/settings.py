@@ -147,7 +147,7 @@ USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR /'static']
 # Default primary key field type
@@ -169,3 +169,42 @@ IMAGE_URL = 'http://120.26.129.134:8080/static/product_images/'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':['utils.jwt_auth.JwtHeaderAuthentication']
 }
+
+# 配置redis缓存
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://120.26.129.134:8000/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "PASSWORD": "Lzh040127!@#$%",  # 可含特殊字符，不需要 URL 编码
+        }
+    }
+}
+
+# 邮箱配置
+# import ssl
+# import certifi
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.qq.com'       # SMTP服务器，比如QQ邮箱
+EMAIL_PORT =587                # 端口，一般587或465
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = '3082566812@qq.com'   # 发送邮箱账号
+EMAIL_HOST_PASSWORD = 'plkrqnacstvsdfig'     # 邮箱SMTP授权码（不是登录密码）
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+# EMAIL_SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
+
+
+# 支付宝沙箱环境配置
+APPID = '2021000149608922'
+ALI_PUB_KEY_PATH = os.path.join(BASE_DIR, 'apps/pay/keys/alipaykey.txt')
+PRIVATE_KEY_PATH = os.path.join(BASE_DIR, 'apps/pay/keys/private_key.txt')
+
+# 异步接收url post
+APP_NOTIFY_URL = 'http://120.26.129.134:8080/pay/alipay/return'
+# 同步接收url get
+RETURN_URL = 'http://120.26.129.134:8080/pay/alipay/return'
+# 是否是开发环境
+ALIPAY_DEBUG = True
+

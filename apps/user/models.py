@@ -7,7 +7,6 @@
 # Feel free to rename the models.py, but don't rename db_table values or field names.
 from django.db import models
 
-
 class User(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True)
     birthday = models.DateTimeField(blank=True, null=True)
@@ -18,5 +17,5 @@ class User(models.Model):
     create_time = models.DateTimeField(auto_now_add=True,blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'user'

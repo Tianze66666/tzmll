@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.urls.converters import register_converter
+from .converts import EmailConverter
 
+register_converter(EmailConverter,'ema')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,7 +29,8 @@ urlpatterns = [
     path('user/',include('user.urls')),
     path('order/',include('order.urls')),
     path('address/',include('address.urls')),
-    path('comment/',include('comment.urls'))
+    path('comment/',include('comment.urls')),
+    path('pay/',include('pay.urls'))
 ]
 
 handler404 = 'Tzmall.view.handler404'

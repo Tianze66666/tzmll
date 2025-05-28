@@ -85,3 +85,36 @@ class CommentResponse:
 	def other(data):
 		"""不确定请求"""
 		return JsonResponse({'status': 5002, 'data': data})
+
+
+class OrderResponse:
+	@staticmethod
+	def success(data):
+		"""成功请求"""
+		return JsonResponse({'status': 6000, 'data': data})
+
+	@staticmethod
+	def filed(data):
+		"""失败请求"""
+		return JsonResponse({'status': 6001, 'data': data})
+
+	@staticmethod
+	def other(data):
+		"""不确定请求"""
+		return JsonResponse({'status': 6002, 'data': data})
+
+class AddressResponse:
+	@staticmethod
+	def success(data):
+		"""成功请求"""
+		return JsonResponse({'status': 7000, 'data': data})
+
+	@staticmethod
+	def filed(data):
+		"""失败请求"""
+		return JsonResponse({'status': 7001, 'data': data})
+
+	@staticmethod
+	def other(data):
+		"""不确定请求"""
+		return JsonResponse({'status': 7002, 'data': data})
