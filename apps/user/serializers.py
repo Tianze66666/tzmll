@@ -62,11 +62,11 @@ class ResetPasswordSerializer(serializers.Serializer):
 		input_code = attrs['check_code']
 		# 取缓存验证码
 		cache_key = f'check:code:{parse.quote(email)}'
-		# cache_code = cache.get(cache_key)
-		# if cache_code is None:
-		# 	raise serializers.ValidationError({'check_code': '验证码已过期或不存在'})
-		# if input_code != cache_code:
-		# 	raise serializers.ValidationError({'check_code': '验证码错误'})
+		cache_code = cache.get(cache_key)
+		if cache_code is None:
+			raise serializers.ValidationError({'check_code': '验证码已过期或不存在'})
+		if input_code != cache_code:
+			raise serializers.ValidationError({'check_code': '验证码错误'})
 		return attrs
 
 	def save(self, **kwargs):

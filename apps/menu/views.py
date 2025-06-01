@@ -4,7 +4,7 @@ from django.views import View
 from utils.ResponseMessage import MenuResponse
 # noinspection PyUnresolvedReferences
 from menu import models
-
+from django.core.cache import cache
 
 # Create your views here.
 
@@ -26,11 +26,15 @@ class GoodsMainView(View):
 class GoodsSubmenuView(View):
 	def get(self,request):
 		main_menu_id = request.GET.get('main_menu_id')
+		cache_submenu = cache.get(f'submenu_{main_menu_id}')
+		if cache_submenu:
+			return JsonResponse(cache_submenu)
 		sub_menu = models.SubMenu.objects.filter(main_menu_id=main_menu_id).all()
 		result_list = []
 		for m in sub_menu:
 			result_list.append(m.__str__())
 		message = MenuResponse.success(result_list)
+		cache.set(f'submenu_{main_menu_id}', message,60*30)
 		return JsonResponse(message)
 
 	def post(self, request):
